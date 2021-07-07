@@ -1,9 +1,6 @@
 package com.felix180.person.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
+@EqualsAndHashCode
 public class Heroe implements Serializable {
 
     @Id

@@ -26,7 +26,7 @@ public class HeroeServiceImpl implements HeroeService {
     }
 
     @Override
-    public Heroe findByName(String name) {
+    public List<Heroe> findByName(String name) {
         return heroeRepository.findByName(name);
     }
 

@@ -24,7 +24,7 @@ public class HeroeController {
     }
 
     @GetMapping("/findByName/{name}")
-    public Heroe findByName(@PathVariable("name") String name) {
+    public List<Heroe> findByName(@PathVariable("name") String name) {
         return heroeService.findByName(name);
     }
 

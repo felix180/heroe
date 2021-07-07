@@ -10,7 +10,7 @@ public interface HeroeService {
 
     Heroe findById(Long id);
 
-    Heroe findByName(String name);
+    List<Heroe> findByName(String name);
 
     Heroe create(Heroe heroe);
 
