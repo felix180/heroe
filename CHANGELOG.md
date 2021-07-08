@@ -1,3 +1,7 @@
+## [0.0.3]
+### Add
+- Se agrega liquebase para heroes iniciales y  la anotation timerlog para imprimir tiempo de los metodos
+
 ## [0.0.2] 
 ### Changed
 - Se modifica metodo findByName 

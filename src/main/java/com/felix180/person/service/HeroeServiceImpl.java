@@ -1,5 +1,6 @@
 package com.felix180.person.service;
 
+import com.felix180.person.config.TimerLog;
 import com.felix180.person.entity.Heroe;
 import com.felix180.person.repository.HeroeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ public class HeroeServiceImpl implements HeroeService {
 
 
     @Override
+    @TimerLog
     public List<Heroe> getAll() {
         return heroeRepository.findAll();
     }
