@@ -2,8 +2,10 @@ package com.felix180.person.service;
 
 import com.felix180.person.config.TimerLog;
 import com.felix180.person.entity.Heroe;
+import com.felix180.person.exception.NoSuchElementFoundException;
 import com.felix180.person.repository.HeroeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,9 +24,11 @@ public class HeroeServiceImpl implements HeroeService {
     }
 
     @Override
+    @Cacheable(value = "heroe_findById", key = "#id")
+    @TimerLog
     public Heroe findById(Long id) {
         Optional<Heroe> byId = heroeRepository.findById(id);
-        return byId.orElse(new Heroe());
+        return byId.orElseThrow(new NoSuchElementFoundException("Not found id "+id));
     }
 
     @Override

@@ -1,3 +1,8 @@
+## [0.0.4]
+### Add
+- Se agrega cache de spring con caffeine se aplica en findById
+- Se crea GlobalExceptionHandler y NoSuchElementFoundException como error personalizado y control del mismo
+
 ## [0.0.3]
 ### Add
 - Se agrega liquebase para heroes iniciales y  la anotation timerlog para imprimir tiempo de los metodos
