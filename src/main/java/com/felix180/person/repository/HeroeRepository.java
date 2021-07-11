@@ -11,6 +11,6 @@ import java.util.List;
 @Repository
 public interface HeroeRepository extends JpaRepository<Heroe, Long> {
 
-    @Query("SELECT h FROM Heroe h WHERE lower(h.name) LIKE concat('%', :name,'%')  ")
+    @Query("SELECT h FROM Heroe h WHERE lower(h.name) LIKE concat('%',lower(:name),'%')  ")
     List<Heroe> findByName(@Param("name")String name);
 }
