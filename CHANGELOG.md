@@ -1,3 +1,7 @@
+## [0.0.6]
+### Add
+- Componente de seguridad y encriptado en caso de necesitar para validar user y pass
+
 ## [0.0.5]
 ### Add
 - Se crea test integracion  
