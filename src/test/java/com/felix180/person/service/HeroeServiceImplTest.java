@@ -33,8 +33,7 @@ class HeroeServiceImplTest {
     Mockito.when(heroeRepository.findAll()).thenReturn(HeroeDataTest.getHeroeList());
     Mockito.when(heroeRepository.findById(ID_1))
         .thenReturn(java.util.Optional.of(HeroeDataTest.getHeroeSuperMan()));
-    Mockito.when(heroeRepository.findByName(QUERY_SUPER))
-        .thenReturn(HeroeDataTest.getHeroeList());
+    Mockito.when(heroeRepository.findByName(QUERY_SUPER)).thenReturn(HeroeDataTest.getHeroeList());
 
     Mockito.when(heroeRepository.save(ArgumentMatchers.any()))
         .thenAnswer(
@@ -44,12 +43,7 @@ class HeroeServiceImplTest {
                   return (Heroe) args[0];
                 })
         .thenReturn(HeroeDataTest.getHeroeSuperMan());
-    Mockito.when(heroeRepository.getById(ID_1))
-            .thenReturn(HeroeDataTest.getHeroeSuperMan());
-
-  //  Mockito.when(heroeRepository.delete(HeroeDataTest.getHeroeSpiderman())).
-
-
+    Mockito.when(heroeRepository.getById(ID_1)).thenReturn(HeroeDataTest.getHeroeSuperMan());
   }
 
   @AfterEach
@@ -83,12 +77,11 @@ class HeroeServiceImplTest {
     heroeToUpdate.setName(NOT_SUPER);
 
     Heroe result = heroeService.update(heroeToUpdate);
-    Assertions.assertEquals(NOT_SUPER,result.getName());
-
+    Assertions.assertEquals(NOT_SUPER, result.getName());
   }
 
   @Test
   void delete() {
-   Assertions.assertEquals(Boolean.TRUE, heroeService.delete(ID_1));
+    Assertions.assertEquals(Boolean.TRUE, heroeService.delete(ID_1));
   }
 }

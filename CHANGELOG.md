@@ -1,3 +1,8 @@
+## [0.0.5]
+### Add
+- Se crea test integracion  
+- Se agrega dockerfile
+
 ## [0.0.4]
 ### Add
 - Se agrega cache de spring con caffeine se aplica en findById
